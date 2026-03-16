@@ -1,0 +1,41 @@
+name: KeyVault
+options:
+  bundleIdPrefix: com.keyvault
+  deploymentTarget:
+    macOS: "14.0"
+  xcodeVersion: "15.0"
+  minimumXcodeGenVersion: "2.38.0"
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    MACOSX_DEPLOYMENT_TARGET: "14.0"
+
+targets:
+  KeyVault:
+    type: application
+    platform: macOS
+    sources:
+      - KeyVault
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.keyvault.app
+        INFOPLIST_FILE: KeyVault/Info.plist
+        CODE_SIGN_ENTITLEMENTS: KeyVault/KeyVault.entitlements
+        PRODUCT_NAME: KeyVault
+        MARKETING_VERSION: "1.0.0"
+        CURRENT_PROJECT_VERSION: 1
+    entitlements:
+      path: KeyVault/KeyVault.entitlements
+      properties:
+        com.apple.security.app-sandbox: false
+        keychain-access-groups:
+          - $(AppIdentifierPrefix)com.keyvault.app
+
+  KeyVaultTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - KeyVaultTests
+    dependencies:
+      - target: KeyVault
