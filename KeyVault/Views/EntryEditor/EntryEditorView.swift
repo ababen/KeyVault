@@ -160,7 +160,7 @@ struct EntryEditorView: View {
             }
             .padding(16)
         }
-        .frame(width: 560, minHeight: 500)
+        .frame(width: 560, height: 500)
         .onAppear { loadEntry() }
     }
 

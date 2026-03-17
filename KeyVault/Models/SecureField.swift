@@ -2,7 +2,7 @@ import Foundation
 import SwiftData
 
 @Model
-final class SecureField {
+final class VaultSecureField {
     var id: UUID
     var label: String
     /// The encrypted value stored at rest. Use VaultCrypto to decrypt.

@@ -27,7 +27,7 @@ final class Entry {
     var name: String
     var provider: String
     var type: EntryType
-    @Relationship(deleteRule: .cascade) var fields: [SecureField]
+    @Relationship(deleteRule: .cascade) var fields: [VaultSecureField]
     @Relationship(deleteRule: .cascade) var agentAccess: [AgentGrant]
     var expiresAt: Date?
     var tags: [String]
@@ -39,7 +39,7 @@ final class Entry {
         name: String,
         provider: String,
         type: EntryType,
-        fields: [SecureField] = [],
+        fields: [VaultSecureField] = [],
         agentAccess: [AgentGrant] = [],
         expiresAt: Date? = nil,
         tags: [String] = [],

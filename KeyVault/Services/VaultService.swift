@@ -35,7 +35,7 @@ final class VaultService {
         )
 
         for (index, fieldValue) in fieldValues.enumerated() {
-            let field = SecureField(
+            let field = VaultSecureField(
                 label: fieldValue.label,
                 isSensitive: fieldValue.isSensitive,
                 sortOrder: index
@@ -76,7 +76,7 @@ final class VaultService {
     // MARK: - Field Operations
 
     func addField(to entry: Entry, label: String, value: String, isSensitive: Bool) throws {
-        let field = SecureField(
+        let field = VaultSecureField(
             label: label,
             isSensitive: isSensitive,
             sortOrder: entry.fields.count
@@ -88,17 +88,17 @@ final class VaultService {
         try modelContext.save()
     }
 
-    func updateFieldValue(_ field: SecureField, newValue: String) throws {
+    func updateFieldValue(_ field: VaultSecureField, newValue: String) throws {
         try VaultCrypto.encryptField(newValue, into: field, using: key)
         field.entry?.updatedAt = Date()
         try modelContext.save()
     }
 
-    func decryptFieldValue(_ field: SecureField) throws -> String {
+    func decryptFieldValue(_ field: VaultSecureField) throws -> String {
         try VaultCrypto.decryptField(field, using: key)
     }
 
-    func deleteField(_ field: SecureField) throws {
+    func deleteField(_ field: VaultSecureField) throws {
         field.entry?.updatedAt = Date()
         modelContext.delete(field)
         try modelContext.save()
