@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct FieldRow: View {
-    let field: SecureField
+    let field: VaultSecureField
     let decryptedValue: String?
     let isVisible: Bool
     let isCopied: Bool

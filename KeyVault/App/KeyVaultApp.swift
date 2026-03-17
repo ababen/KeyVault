@@ -8,7 +8,7 @@ struct KeyVaultApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Entry.self,
-            SecureField.self,
+            VaultSecureField.self,
             Agent.self,
             AgentGrant.self
         ])

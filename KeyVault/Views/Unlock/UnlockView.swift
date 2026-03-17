@@ -40,7 +40,6 @@ struct UnlockView: View {
             if showPasswordField {
                 VStack(spacing: 12) {
                     SecureField("Master Password", text: $password)
-                        .textFieldStyle(.roundedBorder)
                         .frame(maxWidth: 280)
                         .onSubmit { unlockWithPassword() }
 
@@ -73,7 +72,7 @@ struct UnlockView: View {
             Spacer()
         }
         .padding(40)
-        .frame(minWidth: 480, minHeight: 400)
+        .frame(minWidth: 480, idealWidth: 480, minHeight: 400, idealHeight: 400)
         .onAppear {
             if !attemptedBiometric {
                 attemptedBiometric = true
@@ -99,3 +98,4 @@ struct UnlockView: View {
         }
     }
 }
+

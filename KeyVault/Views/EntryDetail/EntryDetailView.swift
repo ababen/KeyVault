@@ -223,7 +223,7 @@ struct EntryDetailView: View {
 
     // MARK: - Actions
 
-    private func toggleFieldVisibility(_ field: SecureField) {
+    private func toggleFieldVisibility(_ field: VaultSecureField) {
         if visibleFields.contains(field.id) {
             visibleFields.remove(field.id)
             decryptedValues.removeValue(forKey: field.id)
@@ -240,7 +240,7 @@ struct EntryDetailView: View {
         appState.autoLock.userActivity()
     }
 
-    private func copyField(_ field: SecureField) {
+    private func copyField(_ field: VaultSecureField) {
         guard let service = vaultService else { return }
         do {
             let value: String
@@ -268,3 +268,4 @@ struct EntryDetailView: View {
         try? vaultService?.deleteEntry(entry)
     }
 }
+

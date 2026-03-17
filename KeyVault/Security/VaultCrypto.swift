@@ -44,16 +44,16 @@ enum VaultCrypto {
         return plaintext
     }
 
-    /// Encrypt and store value into a SecureField.
-    static func encryptField(_ value: String, into field: SecureField, using key: SymmetricKey) throws {
+    /// Encrypt and store value into a VaultSecureField.
+    static func encryptField(_ value: String, into field: VaultSecureField, using key: SymmetricKey) throws {
         let payload = try encrypt(value, using: key)
         field.encryptedValue = payload.ciphertext
         field.nonce = payload.nonce
         field.authTag = payload.tag
     }
 
-    /// Decrypt a SecureField's value.
-    static func decryptField(_ field: SecureField, using key: SymmetricKey) throws -> String {
+    /// Decrypt a VaultSecureField's value.
+    static func decryptField(_ field: VaultSecureField, using key: SymmetricKey) throws -> String {
         try decrypt(
             ciphertext: field.encryptedValue,
             nonce: field.nonce,
