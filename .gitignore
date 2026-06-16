@@ -14,3 +14,8 @@ xcuserdata/
 # Swift Package Manager
 .build/
 Packages/
+
+# Claude session
+.claude/
+build/export/
+ExportOptions.plist
