@@ -14,3 +14,8 @@ xcuserdata/
 # Swift Package Manager
 .build/
 Packages/
+
+# local Claude Code settings (personal, not shared)
+.claude/settings.local.json
+build/export/
+ExportOptions.plist
