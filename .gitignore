@@ -15,7 +15,7 @@ xcuserdata/
 .build/
 Packages/
 
-# Claude session
-.claude/
+# local Claude Code settings (personal, not shared)
+.claude/settings.local.json
 build/export/
 ExportOptions.plist
