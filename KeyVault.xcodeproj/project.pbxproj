@@ -14,7 +14,7 @@
 		13AD84E18515E0831930FF56 /* Agent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7722472E08E84AE890BC22E9 /* Agent.swift */; };
 		26F76F50AA6870AE75ACC142 /* VaultCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E3FE4054058EBBA8E0657A /* VaultCrypto.swift */; };
 		2B476230AF391A222968F22B /* EntryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9769600580AD4CACC74F1028 /* EntryDetailView.swift */; };
-		31974058EF47B4EF7B75F9B0 /* SecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7205556741CCABCDF77069F7 /* SecureField.swift */; };
+		31974058EF47B4EF7B75F9B0 /* VaultSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7205556741CCABCDF77069F7 /* VaultSecureField.swift */; };
 		41CD66BF68862E0EF970B43F /* VaultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80926F0B1FF11ED626612CEE /* VaultService.swift */; };
 		49593EFFD195AF452DC50930 /* VaultCryptoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CA0FC8C9065A6F7A715909 /* VaultCryptoTests.swift */; };
 		4FBCCC61964BA6CF180C3851 /* UnlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00782130B73B3D203E329C60 /* UnlockView.swift */; };
@@ -62,7 +62,7 @@
 		62A9AA1D5E0588FE0D4A53B1 /* AutoLock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLock.swift; sourceTree = "<group>"; };
 		65CA0FC8C9065A6F7A715909 /* VaultCryptoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaultCryptoTests.swift; sourceTree = "<group>"; };
 		65F8F8B75DE3BDE19700F800 /* ExportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportService.swift; sourceTree = "<group>"; };
-		7205556741CCABCDF77069F7 /* SecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureField.swift; sourceTree = "<group>"; };
+		7205556741CCABCDF77069F7 /* VaultSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaultSecureField.swift; sourceTree = "<group>"; };
 		7722472E08E84AE890BC22E9 /* Agent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agent.swift; sourceTree = "<group>"; };
 		7820368C7CFE47475B54EFC3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		80926F0B1FF11ED626612CEE /* VaultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaultService.swift; sourceTree = "<group>"; };
@@ -110,7 +110,7 @@
 				23BB1168ED9DB60918250B01 /* AgentGrant.swift */,
 				8CCBD5A18130079ED35D4CEE /* Entry.swift */,
 				1879778EE578C997DF9AA52F /* EntryTemplate.swift */,
-				7205556741CCABCDF77069F7 /* SecureField.swift */,
+				7205556741CCABCDF77069F7 /* VaultSecureField.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -329,7 +329,7 @@
 				5AF604DC18F0B5A1144A085B /* KeyVaultApp.swift in Sources */,
 				DA4A03124EFCC614AF92636C /* KeychainManager.swift in Sources */,
 				E88E9BD3D0B0746FB4235D9B /* MainView.swift in Sources */,
-				31974058EF47B4EF7B75F9B0 /* SecureField.swift in Sources */,
+				31974058EF47B4EF7B75F9B0 /* VaultSecureField.swift in Sources */,
 				016AA9863382D29455935553 /* SetupView.swift in Sources */,
 				9C599E768BA95A8A309E823C /* SidebarView.swift in Sources */,
 				A23B0BDA346CC1C7D3FB82F1 /* TemplatePickerView.swift in Sources */,

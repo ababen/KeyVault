@@ -4,6 +4,7 @@ import SwiftData
 /// Main three-column layout: Sidebar | Entry List | Entry Detail
 struct MainView: View {
     @EnvironmentObject private var appState: AppState
+    @Environment(\.modelContext) private var modelContext
     @State private var sidebarFilter: SidebarFilter = .all
     @State private var selectedEntry: Entry?
     @State private var searchText = ""
@@ -58,6 +59,10 @@ struct MainView: View {
         }
         .onAppear {
             appState.autoLock.resetTimer()
+            ExpirationMonitor.requestPermissions()
+            Task {
+                await ExpirationMonitor(modelContext: modelContext).checkExpirations()
+            }
         }
     }
 }
