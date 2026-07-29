@@ -99,7 +99,7 @@ KeyVault/
 ├── Services/
 │   ├── VaultService.swift      # CRUD for entries and fields (with encryption)
 │   ├── ExportService.swift     # Encrypted JSON export and import
-│   └── ExpirationMonitor.swift # Background monitoring for expiring credentials
+│   └── ExpirationMonitor.swift # Checks for expiring/expired credentials and notifies (runs on unlock)
 ├── Utilities/
 │   ├── ClipboardManager.swift  # Copy-to-clipboard with 30s auto-clear
 │   └── DateFormatting.swift    # Shared date formatters
